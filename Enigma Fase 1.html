@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Senha</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        img {
+            width: 1280px;
+            height: 720px;
+            object-fit: cover;
+        }
+
+        .password-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #363f49;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="Fase1DoEnigma.png" alt="Imagem no Centro Superior">
+    
+    <div class="password-form">
+        <form action="#" method="post">
+            <label for="Resposta">Resposta:</label>
+            <input type="password" id="Resposta" name="Resposta">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const Resposta = document.getElementById('Resposta').value.toLowerCase();
+            if (senha === 'cachaça') {
+                window.location.href = 'https://outrosite.com';
+            } else {
+                alert('Senha incorreta. Tente novamente.');
+            }
+        });
+    </script>
+</body>
+</html>
